@@ -57,7 +57,7 @@
                         android:layout_marginTop="8dp"
                         android:background="@color/transparent"
                         android:gravity="center_vertical"
-                        android:hint="Откуда"
+                        android:hint="@string/frgm_airtick_from"
                         android:textColor="@color/white"
                         android:textColorHint="@color/hint_color"
                         android:textSize="16sp"
@@ -76,20 +76,15 @@
                         android:layout_marginBottom="8dp"
                         android:background="@color/transparent"
                         android:gravity="center_vertical"
-                        android:hint="Куда"
+                        android:hint="@string/frgm_airtick_to"
                         android:textColor="@color/white"
                         android:textColorHint="@color/hint_color"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
                 </LinearLayout>
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
     </androidx.cardview.widget.CardView>
-
 
     <TextView
         style="@style/TitleText"
@@ -98,7 +93,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal"
-        android:text="Музыкально отлететь" />
+        android:text="@string/music_part" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -109,17 +104,5 @@
         android:orientation="horizontal"
         tools:listitem="@layout/music_offers_view_holder"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/done_dialog_profile"
-        style="@style/GreyButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="24dp"
-        android:gravity="center_horizontal"
-        android:text="Показать все места" />
-
 
 </LinearLayout>
