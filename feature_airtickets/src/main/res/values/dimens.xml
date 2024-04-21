@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_mrg_airtick_frgm">28dp</dimen>
+    <dimen name="parent_cardview_height">122dp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Start Screen Aviasales</string>
+    <!-- Strings used for Bottom Navigation -->
+    <string name="bottom_nav_airtickets">Aвиабилеты</string>
+    <string name="bottom_nav_hotels">Отели</string>
+    <string name="bottom_nav_simply">Короче</string>
+    <string name="bottom_nav_bell">Подписки</string>
+    <string name="bottom_nav_profile">Профиль</string>
+</resources>

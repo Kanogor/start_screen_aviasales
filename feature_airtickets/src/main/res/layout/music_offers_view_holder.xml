@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    tools:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="@color/transparent"
+        app:cardCornerRadius="16dp">
+
+        <ImageView
+            android:id="@+id/music_offer_image"
+            android:layout_width="140dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/die_antwood" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/music_offer_title"
+        style="@style/TitleText.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:text="Die antwoord" />
+
+    <TextView
+        android:id="@+id/music_offer_town"
+        style="@style/TitleText.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:text="Будапешт" />
+
+    <TextView
+        android:id="@+id/music_offer_price"
+        style="@style/TitleText.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:drawableLeft="@drawable/frgm_ic_airtickets"
+        android:gravity="center_horizontal"
+        tools:text=" от 20 264 Р" />
+
+</LinearLayout>

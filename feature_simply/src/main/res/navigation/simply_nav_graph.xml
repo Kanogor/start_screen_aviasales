@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/simply_nav_graph"
+    app:startDestination="@id/simplyFragment">
+
+    <fragment
+        android:id="@id/simplyFragment"
+        android:name="ru.kanogor.feature_simply.presentation.SimplyFragment"
+        android:label="@string/simply"
+        tools:layout="@layout/fragment_simply">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="android-app:/simply" />
+    </fragment>
+    <deepLink
+        android:id="@+id/deepLink2"
+        app:uri="android-app:/simply" />
+</navigation>

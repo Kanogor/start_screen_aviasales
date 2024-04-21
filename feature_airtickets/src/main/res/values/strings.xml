@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aviasales_fragment_label">Авиабилеты</string>
+    <string name="airtick_frgm_title">Поиск дешевых\nавиабилетов</string>
+</resources>
