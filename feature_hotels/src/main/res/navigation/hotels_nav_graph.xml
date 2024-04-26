@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_hotels">
         <deepLink
             android:id="@+id/deepLink"
-            app:uri="android-app:/hotels" />
+            app:uri="android-app:/hotelsFrag" />
     </fragment>
     <deepLink
         android:id="@+id/deepLink2"
-        app:uri="android-app:/hotels" />
+        app:uri="android-app:/hotelsFrag" />
 </navigation>

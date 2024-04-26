@@ -2,7 +2,7 @@
 <resources>
     <string name="aviasales_fragment_label">Авиабилеты</string>
     <string name="airtick_frgm_title">Поиск дешевых\nавиабилетов</string>
-    <string name="frgm_airtick_from">Откуда</string>
-    <string name="frgm_airtick_to">Куда</string>
+    <string name="frgm_airtick_from">Откуда-Москва</string>
+    <string name="frgm_airtick_to">Куда-Турция</string>
     <string name="music_part">Музыкально отлететь</string>
 </resources>

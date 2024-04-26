@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("ItemIdLog", "item id = ${item.itemId}")
             when (item.itemId) {
                 R.id.airticketsFragment -> navigateTo("android-app:/aviasales")
-                R.id.hotelsFragment -> navigateTo("android-app:/hotels")
+                R.id.hotelsFragment -> navigateTo("android-app:/hotelsFrag")
                 R.id.simplyFragment -> navigateTo("android-app:/simply")
                 R.id.bellFragment -> navigateTo("android-app:/bell")
                 R.id.profileFragment -> navigateTo("android-app:/profile")

@@ -9,29 +9,11 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
-abstract class BaseViewModel<State : Any>(initialState: State) : ViewModel() {
+abstract class BaseViewModel : ViewModel() {
 
-    private val _viewStates = MutableStateFlow(initialState)
+    protected val _isLoading = MutableStateFlow(false)
+    val isLoading = _isLoading.asStateFlow()
 
-    protected var viewState: State
-        get() = _viewStates.value
-        set(value) {
-            _viewStates.value = value
-        }
-
-    fun viewStates() = _viewStates.asStateFlow()
-
-    protected inline fun scopeLaunch(
-        context: CoroutineContext = EmptyCoroutineContext,
-        crossinline onError: (e: Exception) -> Unit = {},
-        crossinline job: suspend () -> Unit,
-    ): Job {
-        return viewModelScope.launch(context) {
-            try {
-                job()
-            } catch (e: Exception) {
-                onError(e)
-            }
-        }
-    }
+    protected val _data = MutableStateFlow<Any?>(null)
+    val data = _data.asStateFlow()
 }
