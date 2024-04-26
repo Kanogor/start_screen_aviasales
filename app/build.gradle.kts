@@ -63,16 +63,5 @@ dependencies {
     implementation(Dependencies.Core.viewmodel)
     implementation("androidx.test.ext:junit-ktx:1.1.5")
     implementation(project(":feature_choose_country"))
-    androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
-
-
-//    implementation(platform(Dependencies.Network.okHttpBom))
-//    implementation(Dependencies.Network.okHttp)
-//    implementation(Dependencies.Network.okHttpLogging)
-//    implementation(Dependencies.Network.retofit)
-//    implementation(Dependencies.Network.retofitConverter)
-//
-//    implementation(Dependencies.Moshi.moshi)
-//    ksp(Dependencies.Moshi.ksp)
-
+    androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }
