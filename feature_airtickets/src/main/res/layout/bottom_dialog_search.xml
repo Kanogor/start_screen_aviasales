@@ -73,25 +73,25 @@
         android:layout_marginEnd="16dp"
         android:orientation="horizontal">
 
-        <ru.kanogor.feature_airtickets.presentation.viewgroups.HintIconItem
+        <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.HintIconItem
             android:id="@+id/first_hint_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp" />
 
-        <ru.kanogor.feature_airtickets.presentation.viewgroups.HintIconItem
+        <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.HintIconItem
             android:id="@+id/second_hint_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp" />
 
-        <ru.kanogor.feature_airtickets.presentation.viewgroups.HintIconItem
+        <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.HintIconItem
             android:id="@+id/third_hint_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp" />
 
-        <ru.kanogor.feature_airtickets.presentation.viewgroups.HintIconItem
+        <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.HintIconItem
             android:id="@+id/fourth_hint_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,18 +114,18 @@
             android:layout_margin="16dp"
             android:orientation="vertical">
 
-            <ru.kanogor.feature_airtickets.presentation.viewgroups.PopularPlaceButton
+            <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.PopularPlaceButton
                 android:id="@+id/pop_place_istanbul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <ru.kanogor.feature_airtickets.presentation.viewgroups.PopularPlaceButton
+            <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.PopularPlaceButton
                 android:id="@+id/pop_place_sochi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp" />
 
-            <ru.kanogor.feature_airtickets.presentation.viewgroups.PopularPlaceButton
+            <ru.kanogor.feature_airtickets.presentation.firstpage.viewgroups.PopularPlaceButton
                 android:id="@+id/pop_place_phuket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

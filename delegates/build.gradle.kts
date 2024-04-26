@@ -26,8 +26,6 @@ android {
 
 dependencies {
 
-    implementation("androidx.paging:paging-runtime-ktx:3.2.0")
+    implementation("androidx.paging:paging-runtime-ktx:3.2.1")
     implementation(Dependencies.Core.coreKtx)
-//    implementation("androidx.appcompat:appcompat:1.6.1")
-//    implementation("com.google.android.material:material:1.9.0")
 }

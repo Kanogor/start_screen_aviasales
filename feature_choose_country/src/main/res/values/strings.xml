@@ -1,0 +1,16 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_from">Москва</string>
+    <string name="hint_to">Стамбул</string>
+    <string name="chip_back">обратно</string>
+    <string name="chip_data">24 фев, сб</string>
+    <string name="chip_pass">1,эконом</string>
+    <string name="chip_filter">Фильтр</string>
+    <string name="card_tickets_title">Прямые рейсы</string>
+    <string name="show_all">Показать все</string>
+    <string name="watch_all">Посмотреть все билеты</string>
+    <string name="tools_recycler_title">Уральские авиалинии</string>
+    <string name="tools_recycler_subtitle">07:00 09:10 10:00 11:00 12:00 13:00 12:00</string>
+    <string name="tools_recycler_price">2000 ₽  &#32;&#32;&#32;</string>
+</resources>

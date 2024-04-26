@@ -46,7 +46,7 @@ dependencies {
     implementation(project(":feature_bell"))
     implementation(project(":feature_profile"))
     implementation(project(":feature_simply"))
-    implementation(project(":remote_api"))
+    implementation(project(":db_remote_api"))
     implementation(project(":core"))
 
     implementation(Dependencies.Navigation.fragment)
@@ -62,6 +62,7 @@ dependencies {
     implementation(Dependencies.Core.lifecycle)
     implementation(Dependencies.Core.viewmodel)
     implementation("androidx.test.ext:junit-ktx:1.1.5")
+    implementation(project(":feature_choose_country"))
     androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
 
 

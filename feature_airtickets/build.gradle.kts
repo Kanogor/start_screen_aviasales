@@ -29,7 +29,7 @@ android {
 dependencies {
 
     implementation(project(":delegates"))
-    implementation(project(":remote_api"))
+    implementation(project(":db_remote_api"))
     implementation(project(":core"))
     implementation(project(":core_ui"))
 

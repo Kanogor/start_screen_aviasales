@@ -8,6 +8,7 @@ import org.koin.core.logger.Level
 import ru.kanogor.core.di.coreModule
 import ru.kanogor.feature_airtickets.di.featureAirticketsModule
 import ru.kanogor.feature_bell.di.featureBellModule
+import ru.kanogor.feature_choose_country.di.featureChooseCountryModule
 import ru.kanogor.feature_hotels.di.featureHotelsModule
 import ru.kanogor.feature_profile.di.featureProfileModule
 import ru.kanogor.feature_simply.di.featureSimplyModule
@@ -23,6 +24,7 @@ class App : Application() {
             androidLogger(level = Level.DEBUG)
             modules(
                 featureAirticketsModule(),
+                featureChooseCountryModule(),
                 featureHotelsModule(),
                 featureBellModule(),
                 featureProfileModule(),

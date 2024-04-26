@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_back_black"
     android:orientation="vertical"
-    tools:context="ru.kanogor.feature_airtickets.presentation.AirticketsFragment">
+    tools:context="ru.kanogor.feature_airtickets.presentation.firstpage.AirticketsFragment">
 
     <ProgressBar
         android:id="@+id/progress_bar"

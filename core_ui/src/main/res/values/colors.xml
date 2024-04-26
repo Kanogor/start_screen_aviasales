@@ -21,4 +21,7 @@
     <color name="search_line">#5E5F61</color>
     <color name="subtitle_grey_text">#5E5F61</color>
     <color name="grey_btn">#2F3035</color>
+    <color name="blue_button">#2261BC</color>
+    <color name="blue_text">#2261BC</color>
+
 </resources>

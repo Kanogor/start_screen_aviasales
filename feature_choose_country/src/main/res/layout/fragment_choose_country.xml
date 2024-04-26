@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_back_black"
+    tools:context=".presentation.ChooseCountryFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/airtickets_main_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_back_black"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="13dp"
+                android:backgroundTint="@color/dialog_back_grey"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="13dp"
+                        android:src="@drawable/ic_back" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/airtickets_dialog_from_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:background="@color/transparent"
+                            android:drawableEnd="@drawable/ic_swipe"
+                            android:drawablePadding="8dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_from"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/search_line" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/airtickets_dialog_to_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_gravity="start"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/transparent"
+                            android:drawableEnd="@drawable/ic_clear"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/white"
+                            android:gravity="center_vertical"
+                            android:hint="@string/hint_to"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/first_chip"
+                        style="@style/ChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="34dp"
+                        android:text="@string/chip_back"
+                        android:textAppearance="@style/HintText.Chip"
+                        android:theme="@style/Theme.StartScreenAviasales"
+                        app:chipIcon="@drawable/ic_plus"
+                        app:iconStartPadding="10dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/data_chip"
+                        style="@style/ChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chip_data"
+                        android:textAppearance="@style/HintText.Chip"
+                        android:theme="@style/Theme.StartScreenAviasales" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/count_pass_chip"
+                        style="@style/ChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chip_pass"
+                        android:textAppearance="@style/HintText.Chip"
+                        android:theme="@style/Theme.StartScreenAviasales"
+                        app:chipIcon="@drawable/ic_men"
+                        app:iconStartPadding="10dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filter_chip"
+                        style="@style/ChipStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="30dp"
+                        android:text="@string/chip_filter"
+                        android:textAppearance="@style/HintText.Chip"
+                        android:theme="@style/Theme.StartScreenAviasales"
+                        app:chipIcon="@drawable/ic_filter"
+                        app:iconStartPadding="10dp" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/dialog_back_grey"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TitleText.ChooseCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/card_tickets_title" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_choose_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/ticket_info_item" />
+
+                    <TextView
+                        android:id="@+id/show_all_button"
+                        style="@style/TitleText.ShowAll"
+                        android:text="@string/show_all" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/watch_all_button"
+                style="@style/BlueButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:text="@string/watch_all" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
