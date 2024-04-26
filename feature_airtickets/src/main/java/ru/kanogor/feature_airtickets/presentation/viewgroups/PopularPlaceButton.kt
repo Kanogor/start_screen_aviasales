@@ -26,8 +26,10 @@ class PopularPlaceButton @JvmOverloads constructor(
         binding.title.text = title
     }
 
-    fun setSubTitle(subTitle: String) {
-        binding.subtitle.text = subTitle
+    fun onClick(onClick: () -> Unit) {
+        binding.fullScreenPop.setOnClickListener {
+            onClick.invoke()
+        }
     }
 
 }

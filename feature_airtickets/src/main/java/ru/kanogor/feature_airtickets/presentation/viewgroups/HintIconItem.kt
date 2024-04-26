@@ -25,4 +25,10 @@ class HintIconItem @JvmOverloads constructor(
     fun setSubTitle(subTitle: String) {
         binding.subtitle.text = subTitle
     }
+
+    fun onClick(onClick: () -> Unit) {
+        binding.fullItem.setOnClickListener {
+            onClick.invoke()
+        }
+    }
 }

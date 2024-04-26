@@ -5,4 +5,13 @@
     <string name="frgm_airtick_from">Откуда-Москва</string>
     <string name="frgm_airtick_to">Куда-Турция</string>
     <string name="music_part">Музыкально отлететь</string>
+    <string name="first_hint_text">Сложный маршрут</string>
+    <string name="second_hint_text">Куда угодно</string>
+    <string name="third_hint_text">Выходные</string>
+    <string name="fourth_hint_text">Горячие билеты</string>
+    <string name="istanbul_text">Стамбул</string>
+    <string name="sochi_text">Сочи</string>
+    <string name="phuket_text">Пхукет</string>
+    <string name="pop_place_subtitle">Популярное направление</string>
+    <string name="tools_hint_text">Куда угодно</string>
 </resources>
