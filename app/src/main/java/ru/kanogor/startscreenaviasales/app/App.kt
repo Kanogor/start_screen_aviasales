@@ -12,6 +12,7 @@ import ru.kanogor.feature_choose_country.di.featureChooseCountryModule
 import ru.kanogor.feature_hotels.di.featureHotelsModule
 import ru.kanogor.feature_profile.di.featureProfileModule
 import ru.kanogor.feature_simply.di.featureSimplyModule
+import ru.kanogor.feature_watch_all_tickets.di.featureWatchTicketsModule
 import ru.kanogor.remote_api.di.apiModule
 
 class App : Application() {
@@ -25,6 +26,7 @@ class App : Application() {
             modules(
                 featureAirticketsModule(),
                 featureChooseCountryModule(),
+                featureWatchTicketsModule(),
                 featureHotelsModule(),
                 featureBellModule(),
                 featureProfileModule(),

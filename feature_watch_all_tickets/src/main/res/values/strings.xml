@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="place_text">%1$s-%2$s</string>
+    <string name="tools_places">Москва-Стамбул</string>
+    <string name="tools_date">23 февраля, 1 пассажир</string>
+    <string name="filter">Фильтр</string>
+    <string name="price_chart">График цен</string>
+</resources>

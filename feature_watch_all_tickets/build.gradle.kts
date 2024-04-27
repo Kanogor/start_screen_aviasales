@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.kanogor.feature_choose_country"
+    namespace = "ru.kanogor.feature_watch_all_tickets"
     compileSdk = Config.compileSdk
 
     defaultConfig {
@@ -42,5 +42,8 @@ dependencies {
     implementation(Dependencies.Core.constraintlayout)
     implementation(Dependencies.Core.lifecycle)
     implementation(Dependencies.Core.viewmodel)
-    implementation("androidx.navigation:navigation-runtime-ktx:2.7.7")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
 }

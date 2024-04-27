@@ -6,14 +6,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavDeepLinkRequest
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.kanogor.core.base.BaseFragment
 import ru.kanogor.core_ui.utils.getCurrentDate
-import ru.kanogor.core_ui.utils.getYearFromString
+import ru.kanogor.core_ui.utils.getCurrentDateFull
+import ru.kanogor.core_ui.utils.getDayMonthFromString
+import ru.kanogor.core_ui.utils.getFullDayMonthFromString
 import ru.kanogor.feature_choose_country.databinding.FragmentChooseCountryBinding
 import ru.kanogor.feature_choose_country.domain.model.Ticket
 import ru.kanogor.feature_choose_country.presentation.adapter.TicketsOffersInfoAdapter
@@ -37,6 +42,7 @@ class ChooseCountryFragment : BaseFragment<FragmentChooseCountryBinding>() {
         initEditTextsButtons()
         onChipClick()
         setDataChip()
+        initNavigation()
     }
 
     private fun loadingObserver() {
@@ -98,28 +104,53 @@ class ChooseCountryFragment : BaseFragment<FragmentChooseCountryBinding>() {
     }
 
     private fun setDataChip() {
+        viewModel.setDateDeparture(getCurrentDateFull())
         binding.dataChip.text = getCurrentDate()
     }
 
     private fun onChipClick() {
         with(binding) {
             backChip.setOnClickListener {
-                dateListener(backChip)
+                dateListener(backChip, false)
             }
             dataChip.setOnClickListener {
-                dateListener(dataChip)
+                dateListener(dataChip, true)
             }
         }
     }
 
-    private fun dateListener(chip: Chip) {
+    private fun initNavigation() {
+        with(binding) {
+            chooseCountryBack.setOnClickListener {
+                findNavController().navigateUp()
+            }
+            watchAllButton.setOnClickListener {
+                navigateTo("android-app:/watch_tickets")
+            }
+        }
+    }
+
+    private fun navigateTo(uri: String) {
+        viewModel.setPlaceTo(binding.chooseCountryToEdittext.text.toString())
+        viewModel.setPlaceFrom(binding.chooseCountryFromEdittext.text.toString())
+        val request = NavDeepLinkRequest.Builder
+            .fromUri(uri.toUri())
+            .build()
+        findNavController().navigate(request)
+    }
+
+    private fun dateListener(chip: Chip, isDate: Boolean) {
         val calendar = Calendar.getInstance()
         val currentYear = calendar.get(Calendar.YEAR)
         val currentMonth = calendar.get(Calendar.MONTH)
         val currentDay = calendar.get(Calendar.DAY_OF_MONTH)
         val listener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-            val birthdayDate = "$year-${monthOfYear + 1}-$dayOfMonth"
-            val date = getYearFromString(birthdayDate)
+            val dateTimeString = "$year-${monthOfYear + 1}-$dayOfMonth"
+            val date = getDayMonthFromString(dateTimeString)
+            if (isDate) {
+                val fullDate = getFullDayMonthFromString(dateTimeString)
+                viewModel.setDateDeparture(fullDate)
+            }
             chip.apply {
                 text = date
             }

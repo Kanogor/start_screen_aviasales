@@ -7,6 +7,7 @@
     <include app:graph="@navigation/airtickets_nav_graph" />
     <include app:graph="@navigation/bell_nav_graph" />
     <include app:graph="@navigation/choose_country_nav_graph" />
+    <include app:graph="@navigation/watch_tickets_nav_graph" />
     <include app:graph="@navigation/hotels_nav_graph" />
     <include app:graph="@navigation/profile_nav_graph" />
     <include app:graph="@navigation/simply_nav_graph" />

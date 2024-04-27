@@ -1,4 +1,4 @@
-package ru.kanogor.feature_choose_country.presentation
+package ru.kanogor.feature_watch_all_tickets.presentation
 
 import android.util.Log
 import androidx.lifecycle.viewModelScope
@@ -7,11 +7,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import ru.kanogor.core.base.BaseViewModel
 import ru.kanogor.core.wrapper.DispatcherWrapper
-import ru.kanogor.feature_choose_country.domain.use_case.GetTicketsUseCase
+import ru.kanogor.feature_watch_all_tickets.domain.use_case.GetFlightTicketsUseCase
 import ru.kanogor.remote_api.sharedpref.LocalStorage
 
-class ChooseCountryViewModel(
-    private val getTicketsUseCase: GetTicketsUseCase,
+class WatchTicketsViewModel(
+    private val getFlightTicketsUseCase: GetFlightTicketsUseCase,
     private val dispatcherWrapper: DispatcherWrapper,
     private val localStorage: LocalStorage
 ) : BaseViewModel() {
@@ -22,10 +22,14 @@ class ChooseCountryViewModel(
     private val _placeTo = MutableStateFlow<String?>(null)
     val placeTo = _placeTo.asStateFlow()
 
+    private val _dateDeparture = MutableStateFlow<String?>(null)
+    val dateDeparture = _dateDeparture.asStateFlow()
+
     init {
-        getTicketOffers()
+        getFlightTickets()
         getPlaceFrom()
         getPlaceTo()
+        getDate()
     }
 
     private fun getPlaceFrom() {
@@ -36,23 +40,15 @@ class ChooseCountryViewModel(
         _placeTo.value = localStorage.placeTo
     }
 
-    fun setPlaceFrom(place: String) {
-        localStorage.placeFrom = place
+    private fun getDate() {
+        _dateDeparture.value = localStorage.dateDeparture
     }
 
-    fun setPlaceTo(place: String) {
-        localStorage.placeTo = place
-    }
-
-  fun setDateDeparture(date: String) {
-        localStorage.dateDeparture = date
-    }
-
-    private fun getTicketOffers() {
+    private fun getFlightTickets() {
         viewModelScope.launch(dispatcherWrapper.io) {
             _isLoading.value = true
             kotlin.runCatching {
-                getTicketsUseCase.invoke()
+                getFlightTicketsUseCase.invoke()
             }.fold(
                 onSuccess = {
                     _data.value = it

@@ -63,5 +63,6 @@ dependencies {
     implementation(Dependencies.Core.viewmodel)
     implementation("androidx.test.ext:junit-ktx:1.1.5")
     implementation(project(":feature_choose_country"))
+    implementation(project(":feature_watch_all_tickets"))
     androidTestImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }

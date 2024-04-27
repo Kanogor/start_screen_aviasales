@@ -17,12 +17,21 @@ class PreferencesManager(private val sharedPreferences: SharedPreferences) : Loc
                 .putString(KEY_TO, value)
                 .apply()
         }
+    override var dateDeparture: String?
+        get() = sharedPreferences.getString(KEY_DATE, DEFAULT_DATE)
+        set(value) {
+            sharedPreferences.edit()
+                .putString(KEY_DATE, value)
+                .apply()
+        }
 
     companion object {
         private const val KEY_FROM = "key_from"
         private const val KEY_TO = "key_to"
+        private const val KEY_DATE = "key_date"
         private const val DEFAULT_FROM = "Откуда-Москва"
         private const val DEFAULT_TO = "Куда-Турция"
+        private const val DEFAULT_DATE = "01 января"
 
     }
 }
