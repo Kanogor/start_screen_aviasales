@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="10dp"
-            android:text="Самый удобный"
+            android:text="@string/tools_top_text"
             android:textSize="14sp" />
 
     </androidx.cardview.widget.CardView>
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="21dp"
-                android:text="8000 P"
+                android:text="@string/tools_price"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="-7dp"
-                android:text="3:12 - 7:16"
+                android:text="@string/tools_time"
                 android:textSize="14sp"
                 android:textStyle="italic|bold"
                 app:layout_constraintStart_toEndOf="@id/red_circle"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-7dp"
                 android:paddingHorizontal="16dp"
-                android:text="4ч в пути / Без пересадок"
+                android:text="@string/tools_flight_time"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/flight_time"
@@ -99,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="VKO"
+                android:text="@string/tools_air_from"
                 android:textColor="@color/hint_color"
                 android:textSize="14sp"
                 android:textStyle="italic|bold"
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="AER"
+                android:text="@string/tools_air_to"
                 android:textColor="@color/hint_color"
                 android:textSize="14sp"
                 android:textStyle="italic|bold"

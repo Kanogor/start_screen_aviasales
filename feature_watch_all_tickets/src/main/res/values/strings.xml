@@ -5,4 +5,10 @@
     <string name="tools_date">23 февраля, 1 пассажир</string>
     <string name="filter">Фильтр</string>
     <string name="price_chart">График цен</string>
+    <string name="tools_top_text">Самый удобный</string>
+    <string name="tools_price">8000 P</string>
+    <string name="tools_time">3:12 - 7:16</string>
+    <string name="tools_flight_time">4ч в пути / Без пересадок</string>
+    <string name="tools_air_from">VKO</string>
+    <string name="tools_air_to">AER</string>
 </resources>

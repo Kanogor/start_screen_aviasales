@@ -2,7 +2,6 @@ package ru.kanogor.feature_watch_all_tickets.presentation.adapter.delegates
 
 import android.view.LayoutInflater
 import android.view.View
-import androidx.core.view.isVisible
 import ru.kanogor.core_ui.utils.convertDateToLong
 import ru.kanogor.core_ui.utils.convertLongToTime
 import ru.kanogor.core_ui.utils.getHourFromLongDate
