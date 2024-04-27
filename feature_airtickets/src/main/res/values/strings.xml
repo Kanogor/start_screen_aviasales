@@ -14,4 +14,7 @@
     <string name="phuket_text">Пхукет</string>
     <string name="pop_place_subtitle">Популярное направление</string>
     <string name="tools_hint_text">Куда угодно</string>
+    <string name="tools_title">Die antwoord</string>
+    <string name="tools_subtitle">Будапешт</string>
+    <string name="tools_price">от 20 264 Р</string>
 </resources>

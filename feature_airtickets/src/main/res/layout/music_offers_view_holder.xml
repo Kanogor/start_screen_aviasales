@@ -5,19 +5,19 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingHorizontal="16dp"
+    android:paddingHorizontal="@dimen/default_margin"
     tools:background="@color/black">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="125dp"
-        android:layout_height="125dp"
+        android:layout_width="@dimen/music_card_size"
+        android:layout_height="@dimen/music_card_size"
         android:background="@color/transparent"
-        app:cardCornerRadius="16dp">
+        app:cardCornerRadius="@dimen/default_corners">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/music_offer_image"
-            android:layout_width="140dp"
-            android:layout_height="125dp"
+            android:layout_width="@dimen/music_image_width"
+            android:layout_height="@dimen/music_image_height"
             android:layout_gravity="center"
             tools:src="@drawable/die_antwood" />
     </androidx.cardview.widget.CardView>
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        tools:text="Die antwoord" />
+        tools:text="@string/tools_title" />
 
     <TextView
         android:id="@+id/music_offer_town"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        tools:text="Будапешт" />
+        tools:text="@string/tools_subtitle" />
 
     <TextView
         android:id="@+id/music_offer_price"
@@ -46,6 +46,6 @@
         android:layout_marginVertical="8dp"
         android:drawableLeft="@drawable/frgm_ic_airtickets"
         android:gravity="center_horizontal"
-        tools:text=" от 20 264 Р" />
+        tools:text="@string/tools_price" />
 
 </LinearLayout>

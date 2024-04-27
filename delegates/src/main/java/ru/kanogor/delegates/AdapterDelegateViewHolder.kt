@@ -19,8 +19,4 @@ class AdapterDelegateViewHolder<T, VB : ViewBinding>(val binding: VB) :
     fun bind(bindingBlock: () -> Unit) {
        this._bind = bindingBlock
     }
-
-    fun bindForPayloads(bindingBlock: (payloads: MutableList<Any>) -> Unit) {
-        _bindForPayloads = bindingBlock
-    }
 }

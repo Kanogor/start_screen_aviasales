@@ -4,7 +4,7 @@ import android.util.SparseArray
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class AdaptersDelegateManager<I>() {
+class AdaptersDelegateManager<I> {
 
     private val mapDelegates = mutableMapOf<Int, AdapterDelegate<I>>()
     val test: SparseArray<AdapterDelegate<I>> = SparseArray()

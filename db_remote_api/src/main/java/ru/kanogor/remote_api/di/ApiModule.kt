@@ -14,6 +14,7 @@ import ru.kanogor.remote_api.sharedpref.LocalStorage
 import ru.kanogor.remote_api.sharedpref.PreferencesManager
 
 const val BASE_URL = "https://drive.google.com/"
+const val SHARED_PREF = "SharedPref_base"
 
 fun apiModule() = module {
 
@@ -39,7 +40,7 @@ fun apiModule() = module {
 
 private fun provideAppPreference(application: Application): LocalStorage {
     val myPref = application.applicationContext.getSharedPreferences(
-        "SharedPref_base",
+        SHARED_PREF,
         Context.MODE_PRIVATE
     )
     return PreferencesManager(myPref)
