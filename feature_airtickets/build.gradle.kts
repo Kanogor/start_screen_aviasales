@@ -2,7 +2,6 @@ plugins {
     id(Plugins.library)
     id(Plugins.android)
     id(Plugins.saveArgs)
-
 }
 
 android {

@@ -19,7 +19,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/airtickets_main_screen"
+            android:id="@+id/choose_country_main_screen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/app_back_black"
@@ -53,7 +53,7 @@
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/airtickets_dialog_from_edittext"
+                            android:id="@+id/choose_country_from_edittext"
                             android:layout_width="match_parent"
                             android:layout_height="38dp"
                             android:layout_gravity="start"
@@ -75,7 +75,7 @@
                             android:background="@color/search_line" />
 
                         <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/airtickets_dialog_to_edittext"
+                            android:id="@+id/choose_country_to_edittext"
                             android:layout_width="match_parent"
                             android:layout_height="38dp"
                             android:layout_gravity="start"
@@ -106,7 +106,7 @@
                     app:singleLine="true">
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/first_chip"
+                        android:id="@+id/back_chip"
                         style="@style/ChipStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -177,16 +177,11 @@
                         android:id="@+id/recycler_choose_country"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginVertical="8dp"
                         android:orientation="vertical"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:itemCount="3"
                         tools:listitem="@layout/ticket_info_item" />
-
-                    <TextView
-                        android:id="@+id/show_all_button"
-                        style="@style/TitleText.ShowAll"
-                        android:text="@string/show_all" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
